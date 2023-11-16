@@ -1,12 +1,16 @@
 <details>
 <summary>Early Orange, After Red</summary>
 
-- <a href="early_orange_after_red/ヒクイドリ">ヒクイドリ</a>
-- <a href="early_orange_after_red/abelia">abelia</a>
+<ui>
+<li><a href="early_orange_after_red/ヒクイドリ">ヒクイドリ</a></li>
+<li><a href="early_orange_after_red/abelia">abelia</a></li>
+</ui>
 </details>
 
 <details>
 <summary>Juno Recompile</summary>
 
-- <a href="juno_recompile/制服とカーテンコール">制服とカーテンコール</a>
+<ui>
+<li><a href="juno_recompile/制服とカーテンコール">制服とカーテンコール</a></li>
+</ui>
 </details>

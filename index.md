@@ -7,5 +7,5 @@
 <details>
 <summary>Juno Recompile</summary>
 
-- [制服とカーテンコール](juno_recompile/seifuku_to_curtaincall)
+- <a href="juno_recompile/制服とカーテンコール">制服とカーテンコール</a>
 </details>

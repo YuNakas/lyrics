@@ -1,7 +1,7 @@
 <details>
 <summary>Early Orange, After Red</summary>
 
-- [ヒクイドリ](early_orange_after_red/hikuidori)
+- <a href="early_orange_after_red/hikuidori">ヒクイドリ</a>
 </details>
 
 <details>

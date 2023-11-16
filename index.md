@@ -3,3 +3,9 @@
 
 - [ヒクイドリ](https://YuNakas.github.io/lyrics/early_orange_after_red/ヒクイドリ)
 </details>
+
+<details>
+<summary>Juno Recompile</summary>
+
+- [制服とカーテンコール](https://YuNakas.github.io/lyrics/juno_recompile/制服とカーテンコール)
+</details>

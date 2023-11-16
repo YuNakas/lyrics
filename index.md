@@ -1,11 +1,11 @@
 <details>
 <summary>Early Orange, After Red</summary>
 
-- [ヒクイドリ](https://YuNakas.github.io/lyrics/early_orange_after_red/ヒクイドリ.html)
+- [ヒクイドリ](early_orange_after_red/hikuidori)
 </details>
 
 <details>
 <summary>Juno Recompile</summary>
 
-- [制服とカーテンコール](https://YuNakas.github.io/lyrics/juno_recompile/制服とカーテンコール)
+- [制服とカーテンコール](juno_recompile/seifuku_to_curtaincall)
 </details>

@@ -2,6 +2,7 @@
 <summary>Early Orange, After Red</summary>
 
 - <a href="early_orange_after_red/ヒクイドリ">ヒクイドリ</a>
+- <a href="early_orange_after_red/abelia">abelia</a>
 </details>
 
 <details>

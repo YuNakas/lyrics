@@ -7,6 +7,7 @@
 </ui>
 </details>
 <br />
+
 <details>
 <summary>Juno Recompile</summary>
 
@@ -14,3 +15,14 @@
 <li><a href="juno_recompile/制服とカーテンコール">制服とカーテンコール</a></li>
 </ui>
 </details>
+<br />
+
+<details>
+<summary>その他</summary>
+
+<ui>
+<li><a href="others/知恵の果実">知恵の果実</a></li>
+<li><a href="others/砂の鯨">砂の鯨</a></li>
+</ui>
+</details>
+<br />

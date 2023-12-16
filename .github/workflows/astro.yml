@@ -93,12 +93,6 @@ jobs:
     runs-on: ubuntu-latest
     name: Deploy
     steps:
-      - name: run generate song list
-        run: cd source \
-          node generateSongList.js
-      - name: run move files
-        run: cd source \
-          node moveFiles.js
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3

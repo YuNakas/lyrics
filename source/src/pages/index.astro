@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import songList from '../assets/songList.json'
+---
+
+<Layout title="Lyrics">
+	<main>
+		<ul role="list" class="link-wrapper">
+			{songList.map((category) => {
+				return (
+					<Card
+						title={category.category}
+						body={category.song}
+					/>
+				)
+			})
+		</ul>
+	</main>
+</Layout>
+
+<style>
+.link-wrapper{
+	width: 80%;
+	min-width: 320px;
+	margin: auto;
+	margin-top: 32px
+}
+</style>

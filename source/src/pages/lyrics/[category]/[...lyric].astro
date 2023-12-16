@@ -1,0 +1,56 @@
+---
+import type { GetStaticPaths } from "astro";
+import songList from "../../../assets/songList.json";
+import Layout from "../../../layouts/Layout.astro";
+import LyricBox from "../../../components/LyricBox.astro"
+
+export const getStaticPaths = (() => {
+  let rtnList = [];
+
+  songList.map((category) => {
+    category.song.map((song) => {
+      rtnList.push({ params: { category: category.category, lyric: song } });
+    });
+  });
+  return rtnList;
+}) satisfies GetStaticPaths;
+
+const { category, lyric } = Astro.params;
+
+const lyricsFiles = await Astro.glob("../../../assets/lyrics/*/*.md");
+let content = "";
+lyricsFiles.map((lyricsFile) => {
+  if (lyricsFile.file.endsWith(category + "/" + lyric + ".md")) {
+    content = lyricsFile.rawContent();
+  }
+});
+
+console.log(content.split(/\r\n|\r|\n/g))
+---
+
+<Layout title="Lyrics">
+  <main>
+    <div class="lyric-container">
+      <h2>
+        {lyric}
+      </h2>
+      <p>
+        <LyricBox text={content.split(/\r\n|\r|\n/g)} />
+      </p>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .lyric-container {
+    width: 80%;
+    max-width: 48rem;
+    min-width: 320px;
+    margin: 32px auto;
+    padding: 16px 32px;
+    box-shadow: 0px 0px 50px #cccccc;
+  }
+  p {
+    padding: 8px;
+  }
+</style>

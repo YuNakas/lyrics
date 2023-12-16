@@ -1,5 +1,6 @@
 # build output
 dist/
+assets/lyrics/*
 
 # generated types
 .astro/

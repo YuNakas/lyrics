@@ -1,0 +1,11 @@
+---
+const { text } = Astro.props;
+---
+
+{text.map((row: any) => {
+    return (
+        <>
+            {row}<br />
+        </>
+    )
+})}

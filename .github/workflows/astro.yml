@@ -66,6 +66,12 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
         working-directory: ${{ env.BUILD_PATH }}/source
+      - name: run generate song list
+        run: cd source \
+          node generateSongList.js
+      - name: run move files
+        run: cd source \
+          node moveFiles.js
       - name: Build with Astro
         run: |
           ${{ steps.detect-package-manager.outputs.runner }} astro build \

@@ -24,11 +24,9 @@ lyricsFiles.map((lyricsFile) => {
     content = lyricsFile.rawContent();
   }
 });
-
-console.log(content.split(/\r\n|\r|\n/g))
 ---
 
-<Layout title="Lyrics">
+<Layout title={lyric}>
   <main>
     <a href="/">Topへ戻る</a>
     <div class="lyric-container">

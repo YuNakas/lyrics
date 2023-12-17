@@ -4,13 +4,13 @@ const { title, body } = Astro.props;
 
 <li class="link-card">
 	<div class="card-container">
-		<h2>
+		<h3>
 			{title}
-		</h2>
+		</h3>
 		<p>
 			{
 				body.map((song) => {
-					return <a href={'lyrics/' + title + '/' + song}>{song}</a><br/>;
+					return <a class="song-link" href={'lyrics/' + title + '/' + song}>{song}</a>;
 				})
 			}
     	</p>
@@ -36,14 +36,16 @@ const { title, body } = Astro.props;
     color: #000030;
     opacity: 0.8;
   }
-  h2 {
+  .song-link{
+    margin-right: 24px;
+  }
+  h3 {
     margin: 0;
-    font-size: 1.25rem;
   }
   p {
     margin-top: 0.5rem;
     margin-bottom: 0;
-	margin-left: 32px;
+	  margin-left: 32px;
   }
   .link-card:is(:hover, :focus-within) {
     background-position: 0;

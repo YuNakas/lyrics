@@ -28,7 +28,7 @@ lyricsFiles.map((lyricsFile) => {
 
 <Layout title={lyric}>
   <main>
-    <a href="/">Topへ戻る</a>
+    <a href="/" class="no-print">Topへ戻る</a>
     <div class="lyric-container">
       <h2>
         {lyric}
@@ -41,13 +41,24 @@ lyricsFiles.map((lyricsFile) => {
 </Layout>
 
 <style>
+@media print{
+  .no-print {
+    display: none;
+  }
+  .lyric-container {
+    margin: 0 !important;
+    width: 210mm !important;
+    box-shadow: 0px 0px 0px !important;
+
+  }
+}
   .lyric-container {
     width: 80%;
-    max-width: 48rem;
+    max-width: 210mm;
     min-width: 320px;
     margin: 16px auto;
     padding: 16px 32px;
-    box-shadow: 0px 0px 50px #cccccc;
+    box-shadow: 8px 16px 32px #dddddd;
   }
   p {
     padding: 8px;

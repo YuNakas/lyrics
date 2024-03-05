@@ -33,7 +33,7 @@ lyricsFiles.map((lyricsFile) => {
       <h2>
         {lyric}
       </h2>
-      <p>
+      <p class="lyric-text">
         <LyricBox text={content.split(/\r\n|\r|\n/g)} />
       </p>
     </div>
@@ -67,5 +67,17 @@ lyricsFiles.map((lyricsFile) => {
     margin-left: 16px;
     margin-top: 16px;
     font-size: 20px;
+  }
+
+  @font-face {
+    font-family: 'notoSerif';
+    src: url('NotoSerifJP-Regular.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  .lyric-text{
+    font-family: "notoSerif";
+    font-weight: 400;
   }
 </style>

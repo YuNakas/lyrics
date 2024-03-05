@@ -2,3 +2,16 @@
     size: A4 portrait;
     margin: 0;
 }
+
+@font-face {
+    font-family: 'notoSans';
+    src: url('NotoSansJP-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+* {
+    font-family: "notoSans";
+    font-weight: 400;
+}

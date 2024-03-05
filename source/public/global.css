@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: 'notoSans';
-    src: url('NotoSansJP-Regular.ttf') format('ttf');
+    src: url('/fonts/NotoSansJP-Regular.ttf') format('ttf');
     font-weight: normal;
     font-style: normal;
     font-display: swap;

@@ -1,29 +1,21 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import songList from '../assets/songList.json'
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import songList from "../assets/songList.json";
 ---
 
 <Layout title="中洲ユウの歌詞置き場">
-	<main>
-		<ul role="list" class="link-wrapper">
-			{songList.map((category) => {
-				return (
-					<Card
-						title={category.category}
-						body={category.song}
-					/>
-				)
-			})
-		</ul>
-	</main>
+  <main>
+    <div class="md:pt-8"></div>
+    <div class="md:w-4/5 bg-base-100 mx-auto rounded-md">
+      <h1 class="text-3xl font-semibold px-4 pt-8 text-base-content">中洲ユウの歌詞置き場</h1>
+	  <div class="divider mx-8"></div>
+      {
+        songList.map((category) => {
+          return <Card title={category.category} body={category.song} />;
+        })
+      }
+    </div>
+	<div class="md:pt-8"></div>
+  </main>
 </Layout>
-
-<style>
-.link-wrapper{
-	width: 80%;
-	min-width: 320px;
-	margin: auto;
-	margin-top: 32px
-}
-</style>

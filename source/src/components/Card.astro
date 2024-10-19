@@ -2,51 +2,26 @@
 const { title, body } = Astro.props;
 ---
 
-<li class="link-card">
-	<div class="card-container">
-		<h3>
-			{title}
-		</h3>
-		<p>
-			{
-				body.map((song) => {
-					return <a class="song-link" href={'lyrics/' + title + '/' + song}>{song}</a>;
-				})
-			}
-    	</p>
-	</div>
-</li>
-<style>
-  .link-card {
-    list-style: none;
-    display: flex;
-    padding: 1px;
-    background-size: 400%;
-    border-radius: 7px;
-    border: #000030 solid 1px;
-    background-position: 100%;
-  }
-  .link-card > div {
-    width: 100%;
-    text-decoration: none;
-    line-height: 1.4;
-    padding: calc(1.5rem - 1px);
-    border-radius: 8px;
-    color: #000030;
-    opacity: 0.8;
-  }
-  .song-link{
-    margin-right: 24px;
-  }
-  h3 {
-    margin: 0;
-  }
-  p {
-    margin-top: 0.5rem;
-    margin-bottom: 0;
-	  margin-left: 32px;
-  }
-  .link-card:is(:hover, :focus-within) {
-    background-position: 0;
-  }
-</style>
+<div class="container px-6 py-4">
+  <div class="border-dotted border-2 border-neutral rounded-md p-4">
+    <h3 class="text-xl text-base-content font-medium">
+      {title}
+    </h3>
+    <div class="px-2">
+      <p>
+        {
+          body.map((song: unknown) => {
+            return (
+              <a
+                class="link link-hover link-accent pr-4 py-2 text-md inline-block"
+                href={"lyrics/" + title + "/" + song}
+              >
+                {song}
+              </a>
+            );
+          })
+        }
+      </p>
+    </div>
+  </div>
+</div>

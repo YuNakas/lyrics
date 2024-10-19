@@ -10,7 +10,7 @@ export default {
 		extend: {},
 	},
 	daisyui: {
-		themes: ["lemonade"]
+		themes: ["garden"]
 	},
 	plugins: [
 		require('daisyui'),

@@ -8,7 +8,8 @@ import songList from "../assets/songList.json";
   <main>
     <div class="md:pt-8"></div>
     <div class="md:w-4/5 bg-base-100 mx-auto rounded-md">
-      <h1 class="text-3xl font-semibold p-4 text-base-content">中洲ユウの歌詞置き場</h1>
+      <h1 class="text-3xl font-semibold px-4 pt-8 text-base-content">中洲ユウの歌詞置き場</h1>
+	  <div class="divider mx-8"></div>
       {
         songList.map((category) => {
           return <Card title={category.category} body={category.song} />;

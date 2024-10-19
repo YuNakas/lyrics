@@ -13,7 +13,7 @@ const { title, body } = Astro.props;
           body.map((song: unknown) => {
             return (
               <a
-                class="link link-hover link-primary pr-4 py-2 text-md inline-block"
+                class="link link-hover link-accent pr-4 py-2 text-md inline-block"
                 href={"lyrics/" + title + "/" + song}
               >
                 {song}

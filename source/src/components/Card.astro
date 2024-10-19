@@ -2,12 +2,12 @@
 const { title, body } = Astro.props;
 ---
 
-<div class="container px-6 py-4">
+<div class="container px-6 pb-8">
   <div class="border-dotted border-2 border-neutral rounded-md p-4">
     <h3 class="text-xl text-base-content font-medium">
       {title}
     </h3>
-    <div class="px-2">
+    <div class="px-2 pt-2">
       <p>
         {
           body.map((song: unknown) => {

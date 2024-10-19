@@ -2,7 +2,7 @@
 import type { GetStaticPaths } from "astro";
 import songList from "../../../assets/songList.json";
 import Layout from "../../../layouts/Layout.astro";
-import LyricBox from "../../../components/LyricBox.astro"
+import LyricBox from "../../../components/LyricBox.astro";
 
 export const getStaticPaths = (() => {
   let rtnList = [];
@@ -28,56 +28,24 @@ lyricsFiles.map((lyricsFile) => {
 
 <Layout title={lyric}>
   <main>
-    <a href="/lyrics" class="no-print">Topへ戻る</a>
-    <div class="lyric-container">
-      <h2>
-        {lyric}
-      </h2>
-      <p class="lyric-text">
-        <LyricBox text={content.split(/\r\n|\r|\n/g)} />
-      </p>
+    <div class="md:pt-4"></div>
+    <div class="md:w-4/5 mx-auto mb-2 hidden md:block">
+      <a href="/lyrics" class="link link-primary">← Topへ戻る</a>
     </div>
+    <div class="md:w-4/5 bg-base-100 mx-auto rounded-md p-4">
+      <div class="mb-2 block md:hidden">
+        <a href="/lyrics" class="link link-primary">← Topへ戻る</a>
+      </div>
+      <div class="p-2">
+        <h2 class="font-medium text-xl">
+          {lyric}
+        </h2>
+        <div class="divider"></div>
+        <p class="px-4 leading-7 tracking-wide">
+          <LyricBox text={content.split(/\r\n|\r|\n/g)} />
+        </p>
+      </div>
+    </div>
+    <div class="md:pt-8"></div>
   </main>
 </Layout>
-
-<style>
-@media print{
-  .no-print {
-    display: none;
-  }
-  .lyric-container {
-    margin: 0 !important;
-    width: 210mm !important;
-    box-shadow: 0px 0px 0px !important;
-
-  }
-}
-  .lyric-container {
-    width: 80%;
-    max-width: 210mm;
-    min-width: 320px;
-    margin: 16px auto;
-    padding: 16px 32px;
-    box-shadow: 8px 16px 32px #dddddd;
-  }
-  p {
-    padding: 8px;
-  }
-  a {
-    margin-left: 16px;
-    margin-top: 16px;
-    font-size: 20px;
-  }
-
-  @font-face {
-    font-family: 'notoSerif';
-    src: url('/fonts/NotoSerifJP-Regular.otf') format('otf');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-  .lyric-text{
-    font-family: "notoSerif";
-    font-weight: 400;
-  }
-</style>
